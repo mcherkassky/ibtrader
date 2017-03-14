@@ -1,0 +1,14 @@
+config.py
+*.pyc
+tmp/
+.DS_Store
+.env
+*.csv
+.idea/
+*.db
+/strategy
+/flat
+*.backup
+*.xlsx
+*.png
+*.zip
