@@ -365,6 +365,9 @@ class Series(Base):
 											expiry_dt=expiry_dt)
 
 						contract_db = Contract.filter(Contract.cusip==cusip).first()
+						if contract_db:
+							expiry_dt = contract_db.expiry_dt
+							roll_dt = expiry_dt - datetime.timedelta(days=self.roll_days)
 
 						#check ibcontract expiry
 						if (today - expiry_dt).days <= 5 and not contract_db:# and today < expiry_dt:

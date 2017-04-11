@@ -153,9 +153,9 @@ def backtest():
 	# s4_bt = s4.backtest(datetime.date(2010,1,1), intraday=True, slippage=True)
 
 	# import pdb; pdb.set_trace()
-	s4 = Strategy.filter(Strategy.id==3).first()
+	s4 = Strategy.filter(Strategy.id==7).first()
 	# import pdb; pdb.set_trace()
-	s4_bt = s4.backtest(datetime.date(2010,1,1), intraday=True, slippage=True)
+	s4_bt = s4.backtest(datetime.date(2015,1,1), intraday=True, slippage=True)
 	import pdb; pdb.set_trace()
 	# s6 = Strategy.filter(Strategy.id==6).first()
 	# s6_bt = s6.backtest(datetime.date(2010,1,1), intraday=True)
