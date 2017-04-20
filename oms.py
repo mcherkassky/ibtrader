@@ -34,9 +34,9 @@ if __name__ == '__main__':
 
 				start_time_local = start_time_tz.astimezone(local_tz)
 				#
-				# if strategy.name == 'S4':
-				# 	if series_info.__dict__['eq_series'] == 6:
-				# 		strategy.run(**series_info.__dict__)
+				if strategy.name == 'S4':
+					if series_info.__dict__['eq_series'] == 6:
+						strategy.run(**series_info.__dict__)
 
 				schedule.every().day.at(start_time_local.strftime("%H:%M")).do(strategy.run, **series_info.__dict__)
 

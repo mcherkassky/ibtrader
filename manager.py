@@ -79,15 +79,16 @@ def init_db():
 def load_data():
 	# '''
 
-	series = Series.filter(Series.id==25).first()
-	series.insert_history(client, 2000)
-	series.update_atr(client)
+	# series = Series.filter(Series.id==25).first()
+	# series.insert_history(client, 2000)
+	# series.update_atr(client)
 	# series.update_daily(client)
 	#
 
+
+	intraday = Intraday()
+	intraday.load(3, ticker='ES')
 	import pdb; pdb.set_trace()
-	# intraday = Intraday()
-	# intraday.load(3, ticker='ES')
 	# import pdb; pdb.set_trace()
 	# intraday.load(4, ticker='VX')
 	# intraday.load(5, ticker='FVS')
@@ -153,9 +154,9 @@ def backtest():
 	# s4_bt = s4.backtest(datetime.date(2010,1,1), intraday=True, slippage=True)
 
 	# import pdb; pdb.set_trace()
-	s4 = Strategy.filter(Strategy.id==7).first()
+	s4 = Strategy.filter(Strategy.id==3).first()
 	# import pdb; pdb.set_trace()
-	s4_bt = s4.backtest(datetime.date(2015,1,1), intraday=True, slippage=True)
+	s4_bt = s4.backtest(datetime.date(2005,1,1), intraday=True, slippage=True)
 	import pdb; pdb.set_trace()
 	# s6 = Strategy.filter(Strategy.id==6).first()
 	# s6_bt = s6.backtest(datetime.date(2010,1,1), intraday=True)

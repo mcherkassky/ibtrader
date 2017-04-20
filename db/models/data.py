@@ -23,7 +23,8 @@ from utils.mail import Email
 
 FUT_CONTRACT_CODES = {code: month + 1 for month, code in enumerate('FGHJKMNQUVXZ')}
 # INTRADAY_PATH = 'C:\\Users\\mcherkassky\\Desktop\\marketdata\\intraday'
-INTRADAY_PATH = 'C:\\Users\\mcherkassky\\Desktop\\kibot'
+# INTRADAY_PATH = 'C:\\Users\\mcherkassky\\Desktop\\kibot'
+INTRADAY_PATH = 'C:\\Users\\mcherkassky\\Desktop\\es_new'
 
 class Heartbeat(Base):
 	__tablename__ = 'Heartbeat'
